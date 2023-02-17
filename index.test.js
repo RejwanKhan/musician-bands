@@ -1,7 +1,6 @@
 const sequelize = require("./src/connection");
 const { Bands } = require("./models/Bands");
 const { Musicians } = require("./models/Musicians");
-const { where } = require("sequelize");
 
 beforeAll(async () => {
   await sequelize.sync({ force: true });
@@ -58,7 +57,7 @@ describe("testing bands/Musicians functionality and relationships", () => {
 
   //testing whether you can update an Instance
 
-  it.only("testing whether you can update an instance", async () => {
+  it("testing whether you can update an instance", async () => {
     await Musicians.bulkCreate([
       { name: "Rejwan", instrument: "Piano" },
       { name: "Diogo", instrument: "Violin" },
@@ -80,3 +79,5 @@ describe("testing bands/Musicians functionality and relationships", () => {
     expect(Fatima.name).toEqual("Fatima");
   });
 });
+
+//MUSCIANS AND BANDS PART2
