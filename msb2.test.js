@@ -44,6 +44,8 @@ describe("testing associations between Muscians and Bands", () => {
 
   it("testing whether bands can be assigned to musicians", async () => {
     let john = await Musicians.findOne({ where: { name: "John" } });
+    const allBands = await Bands.findAll();
+    console.table(JSON.stringify(allBands));
 
     const Wombats = await Bands.findOne({ where: { name: "Wombats" } });
 
