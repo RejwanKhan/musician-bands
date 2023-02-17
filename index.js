@@ -1,7 +1,7 @@
 const sequelize = require("./src/connection");
 const { Bands } = require("./models/Bands");
 const { Musicians } = require("./models/Musicians");
-
+const {} = require("./models/Songs");
 Bands.hasMany(Musicians);
 Musicians.belongsTo(Bands);
 
