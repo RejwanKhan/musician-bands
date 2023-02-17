@@ -23,4 +23,13 @@ describe("testing bands/Musicians functionality and relationships", () => {
     const bts = await Bands.findOne({ where: { name: "BTS" } });
     expect(bts.name).toBe("BTS");
   });
+
+  it("testing if you can create new Musician", async () => {
+    const musicians = await Musicians.create({
+      name: "Rejwan",
+      instrument: "Piano",
+    });
+
+    expect(musicians.name).toBe("Rejwan");
+  });
 });
