@@ -1,7 +1,7 @@
 const sequelize = require("./src/connection");
 const { Bands } = require("./models/Bands");
 const { Musicians } = require("./models/Musicians");
-const {} = require("./models/Songs");
+
 Bands.hasMany(Musicians);
 Musicians.belongsTo(Bands);
 
@@ -36,9 +36,9 @@ const main = async () => {
   const Wombats = await Bands.findOne({ where: { name: "Wombats" } });
   console.log(Wombats);
 
-  john.setBand(Wombats);
+  await john.setBand(Wombats);
 };
 
-main();
+// main();
 
 module.exports = main;

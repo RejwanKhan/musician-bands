@@ -1,6 +1,6 @@
 const sequelize = require("./src/connection");
 const { Bands } = require("./models/Bands");
-const { Musicians } = require("./models/Musicians");
+
 const { Songs } = require("./models/Songs");
 const { BandSongs } = require("./models/BandSongs");
 
@@ -47,4 +47,4 @@ const manyToMany = async () => {
   BTS.addSong(6);
 };
 
-manyToMany();
+// manyToMany();

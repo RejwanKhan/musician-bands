@@ -4,7 +4,7 @@ const { DataTypes } = require("sequelize");
 const Bands = sequelize.define("bands", {
   name: DataTypes.STRING,
   genre: DataTypes.STRING,
-  showCount: DataTypes.NUMBER,
+  showCount: DataTypes.INTEGER,
 });
 
 module.exports = { Bands };

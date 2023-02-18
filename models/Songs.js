@@ -3,7 +3,7 @@ const { DataTypes } = require("sequelize");
 
 const Songs = sequelize.define("Songs", {
   title: DataTypes.STRING,
-  year: DataTypes.NUMBER,
+  year: DataTypes.INTEGER,
 });
 
 module.exports = { Songs };
